@@ -1,6 +1,8 @@
 const express = require("express"); 
 const mongoose = require("mongoose"); 
 
+
+
 const app = express(); 
 
 const PORT = process.env.PORT || 3000;
@@ -8,6 +10,7 @@ const PORT = process.env.PORT || 3000;
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(express.static("public"));
 
 
 mongoose.connect(
@@ -38,7 +41,10 @@ app.get("/api/config", (req, res) => {
   });
 });
 
-app.use(require("/controllers/api.js"));
+
+app.use(require("./routes/htmlroutes"));
+
+
 
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
