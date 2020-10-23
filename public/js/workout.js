@@ -17,7 +17,7 @@ async function initWorkout() {
   } else {
     renderNoWorkoutText()
   }
-}
+};
 
 function tallyExercises(exercises) {
   const tallied = exercises.reduce((acc, curr) => {
@@ -31,7 +31,7 @@ function tallyExercises(exercises) {
     return acc;
   }, {});
   return tallied;
-}
+};
 
 function formatDate(date) {
   const options = {
@@ -42,7 +42,7 @@ function formatDate(date) {
   };
 
   return new Date(date).toLocaleDateString(options);
-}
+};
 
 function renderWorkoutSummary(summary) {
   const container = document.querySelector(".workout-stats");
@@ -69,7 +69,7 @@ function renderWorkoutSummary(summary) {
 
     container.appendChild(p);
   });
-}
+};
 
 function renderNoWorkoutText() {
   const container = document.querySelector(".workout-stats");
@@ -79,6 +79,6 @@ function renderNoWorkoutText() {
 
   p.appendChild(strong);
   container.appendChild(p);
-}
+};
 
 initWorkout();

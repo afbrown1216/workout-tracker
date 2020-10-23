@@ -2,7 +2,6 @@ const express = require("express");
 const mongoose = require("mongoose"); 
 
 
-
 const app = express(); 
 
 const PORT = process.env.PORT || 3000;
@@ -41,8 +40,9 @@ app.get("/api/config", (req, res) => {
   });
 });
 
-
-app.use(require("./routes/htmlroutes"));
+app.use(require("./routes/apiroutes"));
+// app.use(require("./routes/htmlroutes"));
+require("./routes/htmlroutes")(app)
 
 
 
