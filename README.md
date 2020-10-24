@@ -17,7 +17,8 @@ This image display the front page which features stats for your last workout.
     <img alt ="Front page, last workout summary" src="last workout summary.png">
 </p>
 
-
+## Questions
+ Please forward any questions to [email(fay.ashbrgmail.com) . Please refer to the code for this project and others at [https://github.com/afbrown1216](https://github.com/afbrown1216).
 
 ## License 
 
